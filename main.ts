@@ -1,5 +1,14 @@
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(COZIR.Co2())
+    basic.showString("ppm")
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.showNumber(Math.round(COZIR.relativeHumidity()))
+    basic.showString("%RH")
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(Math.round(COZIR.temperature()))
+    basic.showString("C")
 })
 serial.redirect(
 SerialPin.P0,
